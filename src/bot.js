@@ -200,7 +200,7 @@ client.on('message', message => { //github
 
       .setTitle('GitHub')
       .setColor(0xff0000)
-      .setURL('https://github.com/Antjus/IMASE')
+      .setURL('https://github.com/Antjus/IMASE-BOT')
       .setTimestamp()
       .setThumbnail('https://media.discordapp.net/attachments/732707047984070741/804723382741893130/mark-github-512.png')
       .setDescription('Check my GitHub boi')
@@ -208,6 +208,6 @@ client.on('message', message => { //github
   }
 });
 
-  client.login("ODAwMzI5NjkzNjUxMDA5NTU3.YAQjHA.FwTw4DcRY-ARFvkZS2CxxcU0K6o");
+  client.login(process.env.BOT_TOKEN);
   
   ``
