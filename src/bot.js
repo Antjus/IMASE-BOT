@@ -191,18 +191,18 @@ client.on('ready', () => { //log and activity
 });
 
 client.on('message', message => { //github
-  if (message.startsWith === `${prefix}github`) {
+  if (message.content.startsWith(`${prefix}github`)) {
     const embed = new MessageEmbed()
 
       .setTitle('GitHub')
       .setColor(0xff0000)
-      .setURL('https://github.com/Antjus')
+      .setURL('https://github.com/Antjus/IMASE-BOT')
       .setTimestamp()
-      .setThumbnail('media.discordapp.net/attachments/732707047984070741/804723382741893130/mark-github-512.png')
+      .setThumbnail('https://media.discordapp.net/attachments/732707047984070741/804723382741893130/mark-github-512.png')
       .setDescription('Check my GitHub boi')
     message.channel.send(embed);
   }
 });
 
 
-  client.login("ur toked, kiddo");
+  client.login(your token, not mine kiddo);
