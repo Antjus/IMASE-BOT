@@ -122,10 +122,6 @@ client.on('ready', () => { //log and activity
         })
       });
 
-  client.on('message', msg => { //idk
-    client.emit('checkMessage', msg);
-  });
-  
   client.on('message', message => { //mute
     if (!message.guild) return;
     const mutedRole = message.guild.roles.cache.get('804333743208267807');
@@ -195,19 +191,18 @@ client.on('ready', () => { //log and activity
 });
 
 client.on('message', message => { //github
-  if (message.content === `${prefix}github`) {
+  if (message.startsWith === `${prefix}github`) {
     const embed = new MessageEmbed()
 
       .setTitle('GitHub')
       .setColor(0xff0000)
-      .setURL('https://github.com/Antjus/IMASE-BOT')
+      .setURL('https://github.com/Antjus')
       .setTimestamp()
-      .setThumbnail('https://media.discordapp.net/attachments/732707047984070741/804723382741893130/mark-github-512.png')
+      .setThumbnail('media.discordapp.net/attachments/732707047984070741/804723382741893130/mark-github-512.png')
       .setDescription('Check my GitHub boi')
     message.channel.send(embed);
   }
 });
 
-  client.login(process.env.BOT_TOKEN);
-  
-  ``
+
+  client.login("ur toked, kiddo");
