@@ -24,13 +24,13 @@ client.on('ready', () => { //log and activity
     }
   });
 
-  client.on('message', message => { //help
+  client.on('message', message => { //help general
     if (message.content === `${prefix}help`) {
       const embed = new MessageEmbed()
 
         .setTitle('Command List')
         .setColor(0xff0000)
-        .setDescription('My commands: \n\n • `y!help` to read this; \n\n • `y!invite` to see and use the invite link; \n\n • `y!ban` to ban an user; \n\n • `y!kick` to kick an user \n\n • `y!mute` to mute an user; \n\n • `y!unmute` to unmute an user \n\n • `y!clear` to delete the last 10 messages')
+        .setDescription('Use: `y!help <command>` \n\n • `🛠 moderating` to see all the chat commands; \n\n • `📷 images` to see all the images commands; \n\n • `😂 fun` see all the "funny" commands; \n\n • `🖱 others` yeah, other commands.')
         .setTimestamp()
         .setFooter('by Antus')
         .setThumbnail('https://images-ext-1.discordapp.net/external/QCcrCbnel2dyEUKsFcttbwUaCqU86blbXDkQaxSjxSg/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/800329693651009557/08389d35b7d658e8008734e248496c61.png?width=425&height=425')
@@ -38,6 +38,59 @@ client.on('ready', () => { //log and activity
     }
   });
 
+  client.on('message', message => { //help moderating
+    if (!message.guild) return;
+  
+    if (message.content.startsWith(`${prefix}help moderating`)) {
+    const embed = new MessageEmbed()
+
+    .setTitle('Moderating Commands')
+    .setColor(0xff0000)
+    .setDescription('Moderating Commands here, boi: \n\n • `y!ban` to ban an user; \n\n • `y!kick` to kick an user \n\n • `y!mute` to mute an user; \n\n • `y!unmute` to unmute an user; \n\n • `y!clear` to delete the last 10 messages.');
+  message.channel.send(embed);
+    }
+  });
+
+  client.on('message', message => { //help images
+    if (!message.guild) return;
+  
+    if (message.content.startsWith(`${prefix}help images`)) {
+    const embed = new MessageEmbed()
+
+    .setTitle('Images Commands')
+    .setColor(0xff0000)
+    .setDescription('**_Coming Soon_**');
+  message.channel.send(embed);
+    }
+  });
+  
+  client.on('message', message => { //help others
+    if (!message.guild) return;
+  
+    if (message.content.startsWith(`${prefix}help others`)) {
+    const embed = new MessageEmbed()
+
+    .setTitle('Other Commands')
+    .setColor(0xff0000)
+    .setDescription('Other Commands here,boi: \n\n • `y!invite` to see and use the invite link; \n\n • `y!github` to see the bot github project.');
+  message.channel.send(embed);
+    }
+  });
+  
+  client.on('message', message => { //help fun
+    if (!message.guild) return;
+  
+    if (message.content.startsWith(`${prefix}help fun`)) {
+    const embed = new MessageEmbed()
+
+    .setTitle('Fun Commands')
+    .setColor(0xff0000)
+    .setDescription('**_Coming Soon_**');
+  message.channel.send(embed);
+    }
+  });
+  
+  
   client.on('message', message => { //kick
     if (!message.guild) return;
   
@@ -205,4 +258,6 @@ client.on('message', message => { //github
 });
 
 
-  client.login(your token, not mine kiddo);
+  client.login(your bot... no mine, kiddo);
+  ``
+  
