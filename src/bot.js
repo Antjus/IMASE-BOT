@@ -72,7 +72,7 @@ client.on('ready', () => { //log and activity
 
     .setTitle('Other Commands')
     .setColor(0xff0000)
-    .setDescription('Other Commands here,boi: \n\n • `y!invite` to see and use the invite link; \n\n • `y!github` to see the bot github project.');
+    .setDescription('Other Commands here,boi: \n\n • `y!invite` to see and use the invite link; \n\n • `y!github` to see the bot github project; \n\n • `y!testnsfw` to check if a channel is safe or not safe for work.');
   message.channel.send(embed);
     }
   });
