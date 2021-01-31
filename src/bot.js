@@ -8,7 +8,7 @@ const antispam = require('better-discord-antispam');
 
 
 client.on('ready', () => { //log and activity
-  client.user.setActivity('IMASE | y!help', {type: "PLAYING"})
+  client.user.setStatus('idle');
   console.log(`I'm here man.`);
   })
 
@@ -30,7 +30,7 @@ client.on('ready', () => { //log and activity
 
         .setTitle('Command List')
         .setColor(0xff0000)
-        .setDescription('Use: `y!help <command>` \n\n • `🛠 moderating` to see all the chat commands; \n\n • `📷 images` to see all the images commands; \n\n • `😂 fun` see all the "funny" commands; \n\n • `🖱 others` yeah, other commands.')
+        .setDescription('Use: `y!help <command>` \n\n • `🛠 moderating` to see all the chat commands; \n\n • `📷 images` to see all the images commands; \n\n • `😂 fun` to see all the "funny" commands; \n\n • `🖱 others` to see...yeah, other commands.')
         .setTimestamp()
         .setFooter('by Antus')
         .setThumbnail('https://images-ext-1.discordapp.net/external/QCcrCbnel2dyEUKsFcttbwUaCqU86blbXDkQaxSjxSg/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/800329693651009557/08389d35b7d658e8008734e248496c61.png?width=425&height=425')
@@ -257,7 +257,33 @@ client.on('message', message => { //github
   }
 });
 
+const activities_list = [
+  `IMASE | y!help`,
+  `Playing Mii Shop song`,
+  `Wii`,
+  `SuperMario64`,
+  `IMASE | y!help`
+  ]; // creates an arraylist containing phrases you want your bot to switch through.
 
-  client.login(your bot... no mine, kiddo);
-  ``
+client.on('ready', () => {
+  setInterval(() => {
+      const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
+      client.user.setActivity(activities_list[index]); // sets client's activities to one of the phrases in the arraylist.
+  }, 8000); // Runs this every 10 seconds.
+});
+
+client.on('message', message => { //prefix
+  if (!message.guild) return;
+
+  if (message.content == `${client.user.username}`) {
+  const embed = new MessageEmbed()
+
+  .setTitle('Heyo boi')
+  .setColor(0xff0000)
+  .setDescription(`My prefix here is **${prefix}**`);
+message.channel.send(embed);
+  }
+});
+
+  client.login(your token... no mine, kiddo);
   
