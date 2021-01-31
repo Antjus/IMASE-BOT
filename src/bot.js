@@ -285,5 +285,5 @@ message.channel.send(embed);
   }
 });
 
-  client.login(your token... no mine, kiddo);
+  client.login(your token... not mine, kiddo);
   
