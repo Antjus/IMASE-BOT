@@ -5,7 +5,7 @@ const client = new Client();
 const got = require('got');
 const prefix = "y!";
 const antispam = require('better-discord-antispam');
-
+const { GiveawaysManager } = require('discord-giveaways');
 
 client.on('ready', () => { //log and activity
   client.user.setStatus('idle');
@@ -30,7 +30,7 @@ client.on('ready', () => { //log and activity
 
         .setTitle('Command List')
         .setColor(0xff0000)
-        .setDescription('Use: `y!help <command>` \n\n • `🛠 moderating` to see all the chat commands; \n\n • `📷 images` to see all the images commands; \n\n • `😂 fun` to see all the "funny" commands; \n\n • `🖱 others` to see...yeah, other commands.')
+        .setDescription('Use: `y!help <command>` \n\n • `🛠 "moderating"` to see all the chat commands; \n\n • `📷 "images"` to see all the images commands; \n\n • `😂 "fun"` to see all the "funny" commands; \n\n • `🖱 "others"` to see...yeah, other commands.')
         .setTimestamp()
         .setFooter('by Antus')
         .setThumbnail('https://images-ext-1.discordapp.net/external/QCcrCbnel2dyEUKsFcttbwUaCqU86blbXDkQaxSjxSg/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/800329693651009557/08389d35b7d658e8008734e248496c61.png?width=425&height=425')
@@ -262,7 +262,11 @@ const activities_list = [
   `Playing Mii Shop song`,
   `Wii`,
   `SuperMario64`,
-  `IMASE | y!help`
+  `IMASE | y!help`,
+  `Nintendo64`,
+  `Pokémon Blue`,
+  `Undertale`,
+  `Your Life`
   ]; // creates an arraylist containing phrases you want your bot to switch through.
 
 client.on('ready', () => {
@@ -272,10 +276,10 @@ client.on('ready', () => {
   }, 8000); // Runs this every 10 seconds.
 });
 
-client.on('message', message => { //prefix
+client.on('message', message => { //prefix call
   if (!message.guild) return;
 
-  if (message.content == `${client.user.username}`) {
+  if (message.content == `prefix`) {
   const embed = new MessageEmbed()
 
   .setTitle('Heyo boi')
@@ -285,5 +289,7 @@ message.channel.send(embed);
   }
 });
 
-  client.login(your token... not mine, kiddo);
+
+  client.login("ODAwMzI5NjkzNjUxMDA5NTU3.YAQjHA.QSA55yluwNpyrY3B2_19KquhCg4");
+  ``
   
