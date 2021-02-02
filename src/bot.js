@@ -290,6 +290,6 @@ message.channel.send(embed);
 });
 
 
-  client.login("ODAwMzI5NjkzNjUxMDA5NTU3.YAQjHA.QSA55yluwNpyrY3B2_19KquhCg4");
+  client.login(process.env.BOT_TOKEN);
   ``
   
