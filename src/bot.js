@@ -44,4 +44,4 @@ client.on('ready', () => {
 
 
 
-client.login(tokahn)
+client.login(tokehn)
