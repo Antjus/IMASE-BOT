@@ -1,7 +1,8 @@
 require('dotenv');
 
-const { Client } = require('discord.js')
+const { Client, MessageEmbed } = require('discord.js')
 const client = new Client()
+const prefix = "y!"
 
 const invite = require('../commands/invite.js')
 const clear = require('../commands/clear.js')
@@ -9,9 +10,15 @@ const github = require('../commands/github.js')
 const help = require('../commands/help.js')
 const ping = require('../commands/ping.js')
 const tnsfw = require('../commands/testnsfw.js')
+const meme = require('../commands/meme.js')
+const cat = require('../commands/cat.js')
+const kick = require('../commands/kick.js')
+const ban = require('../commands/ban.js')
+const dog = require('../commands/dog.js')
 
 client.on('ready', () => { //log and activity
   client.user.setStatus('idle');
+  client.user.setUsername("IMASE"); 
   console.log(`I'm here man.`);
 
   invite(client)
@@ -20,19 +27,26 @@ client.on('ready', () => { //log and activity
   help(client)
   ping(client)
   tnsfw(client)
+  meme(client)
+  cat(client)
+  kick(client)
+  ban(client)
+  dog(client)
 
   })
 
 const activities_list = [
   `IMASE | y!help`,
-  `Playing Mii Shop song`,
+  `Playing Mii Shop Song`,
   `Wii`,
   `SuperMario64`,
   `IMASE | y!help`,
   `Nintendo64`,
   `Pokémon Blue`,
   `Undertale`,
-  `Your Life`
+  `Spotify`,
+  `Visual Studio Code`,
+  `Netflix`  
   ]; 
 
 client.on('ready', () => {
@@ -41,7 +55,5 @@ client.on('ready', () => {
       client.user.setActivity(activities_list[index]); 
   }, 8000); 
 });
-
-
 
 client.login(tokehn)
