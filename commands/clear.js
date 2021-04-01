@@ -4,6 +4,7 @@ module.exports = client => {
     
   client.on("message", message => { //clear
     if(message.content.toLowerCase() === `${prefix}clear`) {
+      if (!message.guild.member(message.author).hasPermission('MANAGE_MESSAGES')) { return message.reply("heyo you can't manage messages!") }
       const embed = new MessageEmbed()
       .setFooter('IMASE', 'https://media.discordapp.net/attachments/806227461070520363/826329523103858738/08389d35b7d658e8008734e248496c61.png')
       .setColor('#CC562C')
