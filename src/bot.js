@@ -2,7 +2,6 @@ require('dotenv');
 
 const { Client, MessageEmbed } = require('discord.js')
 const client = new Client()
-const prefix = "y!"
 
 const invite = require('../commands/invite.js')
 const clear = require('../commands/clear.js')
@@ -63,5 +62,6 @@ client.on('ready', () => {
       client.user.setActivity(activities_list[index]); 
   }, 8000); 
 });
+
 
 client.login(tokehn);
