@@ -70,7 +70,8 @@ module.exports = client => {
     .setTitle('Fun Commands')
     .setColor('#CC562C')
     .setFooter('IMASE', 'https://media.discordapp.net/attachments/806227461070520363/826329523103858738/08389d35b7d658e8008734e248496c61.png')
-    .setDescription('**_Coming Soon_**');
+    .setTimestamp()
+    .setDescription('Moderating Commands here, boi: \n\n • `y!meme` to get some memes; \n\n • `y!aww` PUPPIES GO BRRRRR; \n\n • `y!cat` to get some cats; \n\n • `y!dog` to get some dogs; \n\n • `y!eduardo` to get some _Eduardo_; \n\n • `y!hentai` to get some hentai *. \n\n \n\n *only for **NSFW** channels.');
   message.channel.send(embed);
     }
   });
