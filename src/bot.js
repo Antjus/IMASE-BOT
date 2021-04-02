@@ -15,6 +15,10 @@ const cat = require('../commands/cat.js')
 const kick = require('../commands/kick.js')
 const ban = require('../commands/ban.js')
 const dog = require('../commands/dog.js')
+const aww = require('../commands/aww.js')
+const eduardo = require('../commands/eduardo.js')
+const hentai = require('../commands/hentai.js')
+
 
 client.on('ready', () => { //log and activity
   client.user.setStatus('idle');
@@ -32,6 +36,9 @@ client.on('ready', () => { //log and activity
   kick(client)
   ban(client)
   dog(client)
+  aww(client)
+  eduardo(client)
+  hentai(client)
 
   })
 
@@ -46,7 +53,8 @@ const activities_list = [
   `Undertale`,
   `Spotify`,
   `Visual Studio Code`,
-  `Netflix`  
+  `Netflix` , 
+  `Twitch` 
   ]; 
 
 client.on('ready', () => {
@@ -56,4 +64,4 @@ client.on('ready', () => {
   }, 8000); 
 });
 
-client.login(tokehn)
+client.login(tokehn);
