@@ -17,7 +17,9 @@ const dog = require('../commands/dog.js')
 const aww = require('../commands/aww.js')
 const eduardo = require('../commands/eduardo.js')
 const hentai = require('../commands/hentai.js')
-
+const fact = require('../commands/facts.js')
+const server = require('../commands/server.js')
+const random = require('../commands/random.js')
 
 client.on('ready', () => { //log and activity
   client.user.setStatus('idle');
@@ -38,6 +40,9 @@ client.on('ready', () => { //log and activity
   aww(client)
   eduardo(client)
   hentai(client)
+  fact(client)
+  server(client)
+  random(client)
 
   })
 
