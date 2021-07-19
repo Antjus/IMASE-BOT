@@ -1,0 +1,22 @@
+{
+  "name": "IMASE",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "dependencies": {
+    "discord-anti-spam": "^2.5.1",
+    "discord.js": "^12.5.1",
+    "discord.js-collector": "^1.8.9",
+    "dotenv": "^8.2.0",
+    "fs": "0.0.1-security",
+    "got": "^11.8.2",
+    "mongodb": "^3.6.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
