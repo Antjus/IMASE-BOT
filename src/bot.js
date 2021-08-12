@@ -1,9 +1,10 @@
-const fs = require('fs');
-const Discord = require('discord.js');
-const { prefix, token } = require('../src/config.json');
-const { MessageEmbed } = require('discord.js');
+const fs = require('fs')
+const Canvas = require('canvas')
+const Discord = require('discord.js')
+const { prefix, token } = require('../src/config.json')
+const { MessageEmbed, Intents } = require('discord.js')
 
-const client = new Discord.Client();
+const client = new Discord.Client({ intents: [Intents.FLAGS.DIRECT_MESSAGES, Intents.FLAGS.GUILD_MESSAGES] });
 client.commands = new Discord.Collection();
 client.cooldowns = new Discord.Collection();
 
@@ -26,8 +27,9 @@ client.on('ready', () => {
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 	
-	const args = message.content.slice(prefix.length).trim().split(/ +/);
+	const args = message.content.slice(prefix.length).trim().split(' ');
 	const command = args.shift().toLowerCase();
+
 
 	if (!client.commands.has(command)) return;
 
@@ -72,6 +74,7 @@ const activities_list = [
 		const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); 
 		client.user.setActivity(activities_list[index]); 
 	}, 8000); 
-  
+
+
   
 client.login(token);
