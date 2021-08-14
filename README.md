@@ -1,4 +1,4 @@
-# IMASE
+# IMASE ![alt text](https://github.com/Antjus/IMASE-BOT/blob/main/logo.png)
 [![forthebadge](https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](https://forthebadge.com)
 
 IMASE Is a project that I started just for fun born in January 2021. IMASE is an acronym that stays for "I Moderate And Something Else".
