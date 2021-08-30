@@ -1,5 +1,6 @@
 # IMASE 
-[![forthebadge](https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](https://forthebadge.com) 
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
 IMASE Is a project that I started just for fun born in January 2021. IMASE is an acronym that stays for "I Moderate And Something Else".
 
