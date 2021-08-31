@@ -14,3 +14,5 @@ IMASE Is a project that I started just for fun born in January 2021. IMASE is an
  Actually top.gg didn't review the apply so you can click [here](https://discord.com/oauth2/authorize?client_id=800329693651009557&scope=bot&permissions=7314341752).
  
  TopGG link: [IMASE](https://top.gg/bot/800329693651009557)
+
+PrimeBots Italia: [IMASE](https://primebots.it/bots/800329693651009557)
